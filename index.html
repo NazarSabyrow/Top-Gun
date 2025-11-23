@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Топ Ган - Боевая Миссия</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div id="uiOverlay">
+            <div>СЧЕТ: <span id="score">0</span></div>
+            <div>УРОВЕНЬ: <span id="level">1</span></div>
+            <div>ЗДОРОВЬЕ:</div>
+            <div id="healthBar">
+                <div id="healthFill"></div>
+            </div>
+            <div id="controls">
+                <div>Управление:</div>
+                <div>←↑↓→ - Движение</div>
+                <div>ПРОБЕЛ - Стрельба</div>
+            </div>
+        </div>
+        
+        <div id="startScreen" class="screen">
+            <h1>ТОП ГАН</h1>
+            <p>БОЕВАЯ МИССИЯ</p>
+            <div class="instructions">
+                <p>Уничтожьте вражеские самолеты!</p>
+                <p>Соберите 100 очков для перехода на следующий уровень</p>
+                <p>Избегайте вражеских атак!</p>
+            </div>
+            <button id="startButton">НАЧАТЬ МИССИЮ</button>
+        </div>
+        
+        <div id="levelCompleteScreen" class="screen hidden">
+            <h1>МИССИЯ ВЫПОЛНЕНА!</h1>
+            <p>Уровень <span id="completedLevel">1</span> пройден</p>
+            <p>Счет: <span id="levelScore">0</span></p>
+            <button id="nextLevelButton">СЛЕДУЮЩИЙ УРОВЕНЬ</button>
+        </div>
+        
+        <div id="gameOverScreen" class="screen hidden">
+            <h1>МИССИЯ ПРОВАЛЕНА</h1>
+            <p>Ваш счет: <span id="finalScore">0</span></p>
+            <p>Достигнутый уровень: <span id="finalLevel">1</span></p>
+            <button id="restartButton">ПОВТОРИТЬ МИССИЮ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
